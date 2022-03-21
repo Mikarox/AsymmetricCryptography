@@ -82,10 +82,11 @@ public class GenerateKeys {
              gk = new GenerateKeys(1024);
              //llamamos a la funcion crear llaves
              gk.createKeys();
-             //Escribimos la llave en el archivo
-             gk.writeToFile("KeyPair/publicKey", gk.getPublicKey().getEncoded());
+             //Escribimos la llave  publica en su respectivo archivo
+             //agregamos ruta completa 
+             gk.writeToFile("src/main/java/com/mikaros/asymmetriccryptography/KeyPair/publicKey", gk.getPublicKey().getEncoded());
              //escribimso la llave privada en el archivo
-             gk.writeToFile("KeyPair/privatekey", gk.getPrivateKey().getEncoded());             
+             gk.writeToFile("src/main/java/com/mikaros/asymmetriccryptography/KeyPair/privatekey", gk.getPrivateKey().getEncoded());             
          }catch(NoSuchAlgorithmException | NoSuchProviderException e){
              System.err.println(e.getMessage());
          }catch(IOException e){
@@ -94,5 +95,4 @@ public class GenerateKeys {
      }
      
      
-    
 }
